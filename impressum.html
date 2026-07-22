@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Notice — MKAYRL</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/jpeg" href="mkaylogo.jpeg">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0C;
+    --panel:rgba(255,255,255,.028);
+    --border:rgba(255,255,255,.07);
+    --ink:#F4F2EE;
+    --muted:#8E8C86;
+    --faint:#5B5A55;
+    --amber:#F5A623;
+    --display:'Clash Display',sans-serif;
+    --body:'General Sans',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:var(--body);
+    min-height:100svh;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--amber);color:#0A0A0C}
+  a{text-decoration:none;color:inherit}
+  a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+  header{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px clamp(20px,4vw,40px);
+  }
+  .brand{font-family:var(--display);font-weight:600;font-size:18px}
+  .brand span{color:var(--amber)}
+  .back{
+    padding:9px 16px;border-radius:99px;
+    border:1px solid var(--border);
+    color:var(--muted);
+    font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    transition:color .2s,border-color .2s;
+  }
+  .back:hover{color:var(--ink);border-color:rgba(245,166,35,.45)}
+
+  main{
+    max-width:680px;margin:0 auto;
+    padding:48px clamp(20px,4vw,40px) 120px;
+  }
+  h1{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(38px,6vw,56px);
+    letter-spacing:-.01em;
+    margin-bottom:40px;
+  }
+  section{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:26px 28px;
+  }
+  section + section{margin-top:12px}
+  h2{
+    font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:14px;
+  }
+  p,address{
+    font-style:normal;
+    font-size:16px;line-height:1.7;color:var(--ink);
+    max-width:60ch;
+  }
+  p + p{margin-top:10px}
+  .muted{color:var(--muted);font-size:14px}
+  main a{color:var(--ink);border-bottom:1px solid var(--border);transition:border-color .2s,color .2s}
+  main a:hover{color:var(--amber);border-color:rgba(245,166,35,.45)}
+
+  footer{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+    padding:26px clamp(20px,4vw,40px);
+    border-top:1px solid var(--border);
+    font-size:13px;color:var(--faint);
+  }
+  footer a{color:var(--faint);transition:color .2s}
+  footer a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">mkay<span>rl</span></a>
+  <a class="back" href="index.html">← Back</a>
+</header>
+
+<main>
+  <h1>Legal Notice</h1>
+
+  <section>
+    <h2>Information pursuant to § 5 DDG</h2>
+    <address>
+      mkayrl – Marcus Both<br>
+      c/o Online-Impressum #8128<br>
+      Europaring 90<br>
+      53757 Sankt Augustin, Germany
+    </address>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@mkayrl.de">info@mkayrl.de</a></p>
+  </section>
+
+  <section>
+    <h2>VAT ID</h2>
+    <p>VAT identification number pursuant to § 27a UStG:<br>DE453913202</p>
+  </section>
+
+  <section>
+    <h2>Second contact channel — Mail</h2>
+    <p class="muted">You can also reach me by mail. Please format the address block as follows:</p>
+    <p>
+      mkayrl – Marcus Both<br>
+      c/o Online-Impressum #8128<br>
+      Europaring 90<br>
+      53757 Sankt Augustin, Germany
+    </p>
+  </section>
+
+  <section>
+    <h2>Responsible regulatory authority</h2>
+    <p>
+      Landesanstalt für Medien Nordrhein-Westfalen<br>
+      Registered in: Germany
+    </p>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 mkayrl</span>
+  <a href="index.html">Home</a>
+</footer>
+
+</body>
+</html>
