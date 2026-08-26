@@ -234,8 +234,9 @@
       </div>
       <div class="video-frame">
         <iframe
-          src="https://www.youtube-nocookie.com/embed/ilsqyo4gcHk"
-          title="GC2 versucht in SSL zu gewinnen — mkayrl on YouTube"
+          id="latestVideo"
+          src="https://www.youtube-nocookie.com/embed/m_0Lz5geJTo"
+          title="Latest video by mkayrl"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
@@ -317,6 +318,26 @@
       label.textContent = 'MKAYRL';
     });
   });
+})();
+
+// Always show the newest long-form video. A scheduled GitHub Action keeps
+// latest.json in the repo up to date; we read it straight from GitHub raw so
+// the embed refreshes on its own, without the site ever being re-deployed.
+(function(){
+  var frame = document.getElementById('latestVideo');
+  if (!frame || !window.fetch) return;
+  var SRC = 'https://raw.githubusercontent.com/el1sc/Mkayrl-site/main/latest.json';
+  var bucket = Math.floor(Date.now() / 300000); // refresh at most every 5 min
+  fetch(SRC + '?t=' + bucket, { cache: 'no-store' })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(data){
+      if (!data || !/^[A-Za-z0-9_-]{11}$/.test(data.id)) return;
+      if (frame.src.indexOf(data.id) === -1) {
+        frame.src = 'https://www.youtube-nocookie.com/embed/' + data.id;
+      }
+      if (data.title) frame.title = data.title + ' — mkayrl on YouTube';
+    })
+    .catch(function(){ /* keep the built-in fallback video */ });
 })();
 </script>
 
